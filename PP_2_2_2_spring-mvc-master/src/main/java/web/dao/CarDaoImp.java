@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import web.models.Car;
+
 import java.util.List;
 
 @Repository
@@ -28,7 +29,7 @@ public class CarDaoImp implements CarDAO {
 
     @Override
     @Transactional
-    public List<Car> getCarList(int count){
+    public List<Car> getCarList(int count) {
         Session session = sessionFactory.getCurrentSession();
         return index().stream().limit(count).toList();
     }

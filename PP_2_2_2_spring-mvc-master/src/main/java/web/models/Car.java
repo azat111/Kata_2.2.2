@@ -20,6 +20,12 @@ public class Car {
     public Car() {
     }
 
+    public Car(int id,String model, int series) {
+        this.id = id;
+        this.model = model;
+        this.series = series;
+    }
+
     public Car(String model, int series) {
         this.model = model;
         this.series = series;
